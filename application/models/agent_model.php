@@ -9,10 +9,12 @@ class agent_model extends CI_Model
                       'prenom_agent' => $this->input->post('prenom_agent'),
                        'email_agent' => $this->input->post('email_agent'),
                        'password_agent' => $this->input->post('password_agent'),
+                       'confirm_password' => $this->input->post('confirm_password'),
                         'profession_agent' => $this->input->post('profession_agent'),
                     );
 
                     $this->db->insert('agent_de_sante', $data);
+                    $msg = $this->session->flashdata('msg');
 	}
 
        //Recuperer les noms
@@ -38,6 +40,7 @@ class agent_model extends CI_Model
                      'prenom_agent' => $this->input->post('prenom_agent'),
                      'email_agent' => $this->input->post('email_agent'),
                      'password_agent' => $this->input->post('password_agent'),
+                     'confirm_password' => $this->input->post('confirm_password'),
                      'profession_agent' => $this->input->post('profession_agent'),
 
          );

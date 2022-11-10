@@ -31,15 +31,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                    ->view('Admin/include/sidebar')
                    ->view('Admin/agents')
                    ->view('Admin/include/footer');
+
+        $data['structure_de_sante'] = $this->structure_model->getAllData();
+
+        return $this->load->view('Admin/structure', $data); 
                          
     }
 
-    public function blank()
+    public function structure()
     {
-      
-        $this->load->view('Admin/include/header')
+       $title['title'] = 'Structure';
+        $this->load->view('Admin/include/header', $title)
                    ->view('Admin/include/sidebar')
-                   ->view('Admin/blank')
+                   ->view('Admin/structure')
                    ->view('Admin/include/footer');
     }
 

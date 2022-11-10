@@ -55,4 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['register'] = 'Auth/Register/register'; // route de l'enregistrement
 $route['login'] = 'Auth/Login/login'; // route de l'authenfication
-$route['adminlogin'] = 'Auth/Admin/adminlogin'; // route de l'authenfication
+$route['Structure'] = 'Admin/ajout_agent'; // route de la structure

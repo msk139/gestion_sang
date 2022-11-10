@@ -30,7 +30,13 @@
             <div class="row">
                         <div class="">
                     </div>
-                
+                    <?php if($this->session->flashdata('error')){   ?>
+                                          <div class="alert alert-success">
+
+                                            <?php echo $this->session->flashdata('error'); ?>
+                                         </div>
+
+                                <?php }?>
                     <?php extract($edit);?>
                     <div class="col-lg-8 col-xlg-9 col-md-12">
                         <div class="card">

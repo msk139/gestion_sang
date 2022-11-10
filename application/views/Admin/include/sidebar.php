@@ -36,17 +36,17 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('home/map_google')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url()?>"
                                 aria-expanded="false">
                                 <i class="fa fa-globe" aria-hidden="true"></i>
                                 <span class="">Google Map</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('home/blank')?>"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('Structure/index')?>"
                                 aria-expanded="false">
                                 <i class="fa fa-columns" aria-hidden="true"></i>
-                                <span class="">Blank Page</span>
+                                <span class="">Structure</span>
                             </a>
                         </li>
                         <li class="sidebar-item">

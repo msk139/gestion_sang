@@ -27,12 +27,14 @@ class Admin extends CI_Controller
     $this->form_validation->set_rules('prenom_agent',  'Prenom',  'required|trim');
     $this->form_validation->set_rules('email_agent',  'Mail',  'required|trim|valid_email');
     $this->form_validation->set_rules('password_agent',  'Password',  'required|trim');
+    $this->form_validation->set_rules('confirm_password',  'Confirmer mot de passe',  'required|trim');
     $this->form_validation->set_rules('profession_agent',  'Profession',  'required|trim');
     if ($this->form_validation->run()  ==  true) {
       $this->load->model('agent_model');
       $this->agent_model->insert_data();
     } {
-      redirect(base_url('Admin/index'));
+      $this->session->set_flashdata('error', 'Enregistrement effectué avec succès');
+      redirect(base_url('Admin/ajout_agent'));
     }
   }
   // modifier les noms
@@ -45,12 +47,15 @@ class Admin extends CI_Controller
                ->view('Admin/include/sidebar')
                ->view('Admin/agentsEdit', $data)
                ->view('Admin/include/footer');
+               //$this->session->set_flashdata('error', 'Modification effectuée avec succès');
+              // redirect(base_url('Admin/agentsEdit'));
   }
 
   //Mettre à jour
   public function update($id)
   {
     $this->agent_model->update($id);
+    $this->session->set_flashdata('error', 'Modification effectuée avec succès');
     redirect(base_url('Admin/index'));
   }
 
@@ -58,6 +63,13 @@ class Admin extends CI_Controller
   public function delete($id)
   {
     $this->agent_model->delete($id);
+    $this->session->set_flashdata('error', 'Suppression effectuée avec succès');
     redirect(base_url('Admin/index'));
+  }
+  public function ajout_agent(){
+         $this->load->view('Admin/include/header')
+                    ->view('Admin/include/sidebar')
+                    ->view('Admin/ajout_agent')
+                    ->view('Admin/include/footer');  
   }
 }

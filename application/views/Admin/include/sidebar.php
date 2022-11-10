@@ -32,7 +32,7 @@
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('Groups_sang/index')?>"
                                 aria-expanded="false">
                                 <i class="fa fa-font" aria-hidden="true"></i>
-                                <span class="">Icon</span>
+                                <span class="">Gestion GS</span>
                             </a>
                         </li>
                         <li class="sidebar-item">

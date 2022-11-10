@@ -27,7 +27,7 @@ class Admin extends CI_Controller
     $this->form_validation->set_rules('prenom_agent',  'Prenom',  'required|trim');
     $this->form_validation->set_rules('email_agent',  'Mail',  'required|trim|valid_email');
     $this->form_validation->set_rules('password_agent',  'Password',  'required|trim');
-    $this->form_validation->set_rules('confirm_password',  'Confirmer mot de passe',  'required|trim');
+    $this->form_validation->set_rules('confirm_password',  'Confirmer mot de passe',  'required|trim', 'required|matches[password]');
     $this->form_validation->set_rules('profession_agent',  'Profession',  'required|trim');
     if ($this->form_validation->run()  ==  true) {
       $this->load->model('agent_model');

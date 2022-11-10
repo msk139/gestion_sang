@@ -50,18 +50,17 @@
                                                 <td><?php echo $row->nom_structure; ?></td>
                                                 <td><?php echo $row->lieu_structure; ?></td>                       
                                                 <td class="btn btn-success"> <a href="<?php echo base_url('Structure/edit');?>/<?php echo $row->id_structure;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-edit"></i></div></td>
-                                                <?php if($this->session->flashdata('error')){   ?>
+                                                        <td class="btn btn-danger"> <a href="<?php echo base_url('Structure/delete');?>/<?php echo $row->id_structure;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
+                                           </tr>
+                                           <?php } ?>
+                                           <?php if($this->session->flashdata('error')){   ?>
                                                          <div class="alert alert-success">
 
                                                             <?php echo $this->session->flashdata('error'); ?>
                                                          </div>
 
                                                 <?php }?>
-                                                <td class="btn btn-danger"> <a href="<?php echo base_url('Structure/delete');?>/<?php echo $row->id_structure;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
-
-                                           </tr>
-                                           <?php } ?>
-                                            
+                                        
                                     </tbody>               
                                 </table>
                             </div>

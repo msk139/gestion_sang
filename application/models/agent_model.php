@@ -8,7 +8,7 @@ class agent_model extends CI_Model
 		$data = array('nom_agent' => $this->input->post('nom_agent'),
                       'prenom_agent' => $this->input->post('prenom_agent'),
                        'email_agent' => $this->input->post('email_agent'),
-                       'password_agent' => $this->input->post('password_agent'),
+                       'password_agent' => password_hash($this->input->post('password_agent'), PASSWORD_DEFAULT),
                        'confirm_password' => $this->input->post('confirm_password'),
                         'profession_agent' => $this->input->post('profession_agent'),
                     );

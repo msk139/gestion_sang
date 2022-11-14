@@ -17,6 +17,7 @@ class Groups_sang extends CI_Controller {
    
     public function create() {
         $this->Groups_sang_model->createData();
+        $this->session->set_flashdata('error', 'Enregistrement effectué avec succès');
         redirect("Groups_sang");
     }
 

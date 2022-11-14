@@ -55,8 +55,7 @@
                                                 <td><?php echo $row->email_agent; ?></td>
                                                 <td><?php echo $row->password_agent; ?></td>
                                                 <td><?php echo $row->profession_agent; ?></td>
-                                                <td class="btn btn-success"> <a href="<?php echo base_url('Admin/edit');?>/<?php echo $row->id_agent;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-edit"></i></div></td>
-                                                     
+                                                <td class="btn btn-success"> <a href="<?php echo base_url('Admin/edit');?>/<?php echo $row->id_agent;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-edit"></i></div></td>  
                                                 <td class="btn btn-danger"> <a href="<?php echo base_url('Admin/delete');?>/<?php echo $row->id_agent;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
 
                                            </tr>

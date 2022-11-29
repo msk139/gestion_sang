@@ -39,8 +39,22 @@
             <div class="modal-body">
                 <form method="post" action="<?php echo base_url('Groups_sang/create')?>">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Goupe Sanguin</label>
-                        <input type="text" class="form-control" name="nom_rhesus" aria-describedby="emailHelp" placeholder="Entrer Goupe Sanguin">
+                        <label for="exampleInputEmail1">Groupe Sanguin</label>
+                        <div class="form-group col-md-4">
+                                
+                                <select name="nom_rhesus" id="exampleModalLabel" class="form-control">
+                                    <option selected>Choisir Goupe</option>
+                                    <option value="A+">A+</option>
+                                    <option value="B+">B+</option>
+                                    <option value="O+">O+</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O-">O-</option>
+                                    <option value="B-">B-</option>
+                                    <option value="A-">A-</option>
+                                </select>
+                                </div>
+                        <!--<input type="text"  class="form-control" name="nom_rhesus" aria-describedby="emailHelp" placeholder="Entrer Goupe Sanguin">-->
                     </div>
                     <button type="submit" class="btn btn-primary" value="save">Submit</button>
                 </form>

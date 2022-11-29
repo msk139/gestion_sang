@@ -49,16 +49,23 @@
                                 <span class="">Structure</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?php echo base_url('home/file_not_found')?>"
-                                aria-expanded="false">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                <span class="">Error 404</span>
-                            </a>
-                        </li>
+                      <div class="dropdown">
+                          <li class="sidebar-item">
+                                    <a class="sidebar-link waves-effect waves-dark" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" href="<?php echo base_url('home/rapport')?>" >
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i> Reporting
+                                         <ul class="dropdown-menu">
+                                             <li><hr class="dropdown-divider"></li>
+                                             <li><a class="dropdown-item" href="<?php echo base_url('Admin/print')?>/<? ?>">Agents</a></li>
+                                             <li><a class="dropdown-item" href="#">Structure</a></li>
+                                             <li><a class="dropdown-item" href="#">Sang</a></li>
+                                         </ul>
+                                    </a>
+                           </li>
+                      </div>
+                        
                     </ul>
-
                 </nav>
+                
                 <!-- End Sidebar navigation -->
             </div>
             <!-- End Sidebar scroll-->

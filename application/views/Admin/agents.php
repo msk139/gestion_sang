@@ -26,6 +26,7 @@
             <!-- ============================================================== -->
            
                    <!--Liste des agents-->
+                   
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
@@ -41,7 +42,7 @@
                                             <th class="border-top-0">nom_agent</th>
                                             <th class="border-top-0">prenom_agent</th>
                                             <th class="border-top-0">email_agent</th>
-                                            <th class="border-top-0">password_agent</th>
+                                            
                                             <th class="border-top-0">profession_agent</th>
                                         </tr>
                                     </thead>
@@ -53,10 +54,10 @@
                                                 <td><?php echo $row->nom_agent; ?></td>
                                                 <td><?php echo $row->prenom_agent; ?></td>
                                                 <td><?php echo $row->email_agent; ?></td>
-                                                <td><?php echo $row->password_agent; ?></td>
+                                         
                                                 <td><?php echo $row->profession_agent; ?></td>
                                                 <td class="btn btn-success"> <a href="<?php echo base_url('Admin/edit');?>/<?php echo $row->id_agent;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-edit"></i></div></td>  
-                                                <td class="btn btn-danger"> <a href="<?php echo base_url('Admin/delete');?>/<?php echo $row->id_agent;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
+                                                <td class="btn btn-danger delete"> <a href="<?php echo base_url('Admin/delete');?>/<?php echo $row->id_agent;?>" onclick="return confirm('Etes vous sûr de vouloir supprimer cet agent?')"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
 
                                            </tr>
                                            <?php } ?>
@@ -67,6 +68,7 @@
                                                 </div>
 
                                             <?php }?> 
+                                        
                                     </tbody>               
                                 </table>
                             </div>

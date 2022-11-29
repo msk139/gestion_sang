@@ -33,8 +33,10 @@
     <script src="<?php echo base_url('assets')?>/plugins/bower_components/chartist/dist/chartist.min.js"></script>
     <script src="<?php echo base_url('assets')?>/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
     <script src="<?php echo base_url('assets')?>/js/pages/dashboards/dashboard1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="<?php echo base_url('assets')?>/https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
+    
 </body>
 
 </html>

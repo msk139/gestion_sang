@@ -54,5 +54,5 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['register'] = 'Auth/Register/register'; // route de l'enregistrement
-$route['login'] = 'Auth/Login/login'; // route de l'authenfication
-$route['Structure'] = 'Admin/ajout_agent'; // route de la structure
+$route['login'] = 'Auth/Login/login'; // route de l'authenfication; 
+//$route['agents/delete/(:any)']['DELETE'] = 'Admin/agents/delete/$1';

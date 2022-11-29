@@ -24,6 +24,13 @@ class agent_model extends CI_Model
         return $query->result();
     }
 
+    public function getData($id)
+    {
+      $this->db->select('*');
+      $this->db->where('id_agent', $id);
+      $row = $this->db->get('agent_de_sante');
+      return $row->row_array();
+    }
     //Modifier
     public function edit($id)
     {
@@ -54,4 +61,5 @@ class agent_model extends CI_Model
         $this->db->where('id_agent', $id);
         $this->db->delete('agent_de_sante');   
     }
+    
 }

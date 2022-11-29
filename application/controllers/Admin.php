@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+use Mpdf\Mpdf;
+require FCPATH.'/vendor/autoload.php';
 class Admin extends CI_Controller
 {
   public function __construct()
@@ -72,4 +74,26 @@ class Admin extends CI_Controller
                     ->view('Admin/ajout_agent')
                     ->view('Admin/include/footer');  
   }
+  function print()
+  {
+    $data['agent_de_sante']= $this->agent_model->getAllData();
+    
+    $html = $this->load->view('Admin/agent_pdf' ,$data, true);
+    $mpdf = new \Mpdf\Mpdf();                                                                 
+    $mpdf->WriteHTML($html);
+    $mpdf->Output();
+  }
+  public function agent_pdf ()
+  {
+        
+    $this->load->view('Admin/include/header')
+               ->view('Admin/include/sidebar')
+               ->view('Admin/agent_pdf')
+               ->view('Admin/include/footer');
 }
+
+
+
+}
+
+

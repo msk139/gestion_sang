@@ -74,16 +74,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                    ->view('Admin/include/footer');
     }
 
-    public function file_not_found ()
-    {
-        
-        $this->load->view('Admin/include/header')
-                   ->view('Admin/include/sidebar')
-                   ->view('Admin/404')
-                   ->view('Admin/include/footer');
-    }
     
-    
-   
-
 } 

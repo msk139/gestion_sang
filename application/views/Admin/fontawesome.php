@@ -106,7 +106,7 @@
                                                 <th  scope="row"><?php echo $i++;?></th>
                                                 <td><?php echo $row->nom_rhesus; ?></td>
                                                <td class="btn btn-success"> <a href="<?php echo base_url('Groups_sang/edit');?>/<?php echo $row->id_groupe_sanguin;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-edit"></i></div></td>  
-                                                <td class="btn btn-danger"> <a href="<?php echo base_url('Groups_sang/delete');?>/<?php echo $row->id_groupe_sanguin;?>"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
+                                                <td class="btn btn-danger"> <a href="<?php echo base_url('Groups_sang/delete');?>/<?php echo $row->id_groupe_sanguin;?>" onclick="return confirm('Etes vous sûr de vouloir supprimer ce groupe sanguin?')"><div class="col-sm-6 col-md-6 col-lg-3 f-icon"><i class="fas fa-trash"></i></div></td>
 
                                            </tr>
                                            <?php } ?>

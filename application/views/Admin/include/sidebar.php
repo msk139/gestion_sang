@@ -56,7 +56,7 @@
                                          <ul class="dropdown-menu">
                                              <li><hr class="dropdown-divider"></li>
                                              <li><a class="dropdown-item" href="<?php echo base_url('Admin/print')?>/<? ?>">Agents</a></li>
-                                             <li><a class="dropdown-item" href="#">Structure</a></li>
+                                             <li><a class="dropdown-item" href="<?php echo base_url('Structure/print')?>">Structure</a></li>
                                              <li><a class="dropdown-item" href="#">Sang</a></li>
                                          </ul>
                                     </a>

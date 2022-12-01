@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+use Mpdf\Mpdf;
+require FCPATH.'/vendor/autoload.php';
 class Structure extends CI_Controller
 {
   public function __construct()
@@ -67,4 +69,22 @@ class Structure extends CI_Controller
                 ->view('Admin/ajout_structure')
                 ->view('Admin/include/footer');  
   }
+  function print()
+  {
+    $data['structure_de_sante']= $this->structure_model->getAllData();
+    
+    $html = $this->load->view('Admin/structure_pdf' ,$data, true);
+    $mpdf = new \Mpdf\Mpdf();                                                                 
+    $mpdf->WriteHTML($html);
+    $mpdf->Output();
+  }
+  public function structure_pdf ()
+  {
+        
+    $this->load->view('Admin/include/header')
+               ->view('Admin/include/sidebar')
+               ->view('Admin/structure_pdf')
+               ->view('Admin/include/footer');
+}
+
 }
